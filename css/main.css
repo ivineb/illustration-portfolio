@@ -1,0 +1,187 @@
+
+/* styles
+*/
+
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  --color-blue: #249ada;
+  --color-white: #fff;
+  --color-orange: #ff4500;
+  --color-purple: #4239a5;
+  --font-title: 'Open Sans', sans-serif;
+  --font-text: 'IBM Plex Sans', sans-serif;
+  }
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-family: var(--font-title);
+  color: var(--color-purple);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.2em;
+  font-family: var(--font-text);
+}
+
+body {
+  line-height: 1.5;
+}
+   
+a {
+  text-decoration: none;
+  color: var(--color-purple);
+}
+
+li {
+font-family: var(--font-title);
+}
+
+a:hover {
+  color: var(--color-orange);
+}
+
+a:active {
+  color: var(--color-blue);
+}
+
+  
+/* main grid layout
+*/
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 2em 6em;
+}
+
+header {
+  grid-column: 1 / -1;
+}
+
+.content {
+  grid-column: 1 / -1;
+}
+
+footer {
+  background: var(--color-orange);
+  
+}
+
+img {
+  max-width: 100%;
+}
+
+/*** 
+** homepage 
+***/
+
+/* .projects */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 4em;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+
+/**
+** .web-bar & .page-footer
+ **/
+
+.web-bar, .page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.web-bar__list li, .page-footer__nav-list li { 
+  display: inline-block;
+  list-style: none;
+}
+
+.web-bar__list li, .page-footer__nav-list li:not(:first-child) {
+  margin-left: 2em;
+}
+
+.page-footer__copyright {
+  margin-right: 2em;
+}
+
+.web-bar__title {
+  font-size: 2.5em;
+}
+
+/***
+** .about-page
+ ***/
+
+.about-page {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(690px, 1fr));
+  align-items: center;
+}
+
+.about {
+  max-width: 500px;
+  grid-column: 3 / 6;
+}
+
+.image {
+  grid-column: 7 / 11;
+}
+
+.image__caption {
+  font-size: 1.1em;
+  font-weight: 200;
+  color: var(--color-purple);
+  font-style: italic;
+}
+
+.about__title {
+  font-size: 4em;
+}
+
+/***
+** .project-page
+ ***/
+
+.project-page {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(690px, 1fr));
+  align-items: center;
+}
+
+.project-section {
+  grid-column: 2 / 8;
+}
+
+.project-info {
+  grid-column: 9 / 11;
+}
+
+.project-info__title {
+  font-size: 2em;
+}
+
+.next-project {
+  grid-column: 12 / 13;
+}
