@@ -191,6 +191,10 @@ img {
   font-size: 4em;
 }
 
+.about__text {
+  font-size: 2em;
+}
+
 /***
 ** .project-page
  ***/
